@@ -44,7 +44,7 @@ characterHint = characters[character]
 
 guessedCharacter = None
 
-while (guessedCharacter != character):
+while (len(characters) > 0):
     character = random.choice(list(characters.keys()))
     characterHint = characters[character]
 
@@ -64,7 +64,7 @@ while (guessedCharacter != character):
         del characters[character]
         hintNumber += 1
 
-    if (characters == None):
+    if (len(characters) == 0):
         print('Game over!')
         print('Let\'s see how you did')
         if ((numberCorrect / 26) > .50):
